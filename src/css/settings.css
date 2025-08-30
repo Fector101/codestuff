@@ -1,0 +1,314 @@
+.settings-screen.screen {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.settings-screen.screen > main {
+  overflow: auto;
+  width: 100%;
+  background: ble;
+  height: 100%;
+}
+header.status-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: #0f131b;
+  color: #f5f5f5;
+  border-bottom: 1px solid #2a2a2a;
+  gap: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 12px 12px;
+  height: 50px;
+}
+
+header .status-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+header .status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+header .status-dot.connected {
+  background: var(--connection-color);
+}
+header .status-dot.disconnected {
+  background: #f44336;
+}
+
+header .pc-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+
+header #pcNameContainer {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+header #pcNameScroller {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+header .scroll {
+  animation: scrollText linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+main {
+  color: white;
+  padding: 15px 5px;
+}
+main h1 {
+  margin-bottom: 5px;
+  margin-left: 15px;
+  font-size: 25px;
+}
+main .desc {
+  margin-left: 17px;
+  color: #c8c8c8;
+}
+
+.settings-screen .methods,
+.settings-screen .pcs-box {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+  padding-top: 5px;
+}
+
+.settings-screen .pcs-box .pc-card {
+  min-height: 70px;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  color: white;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 14px !important;
+}
+
+.pcs-box button {
+  margin-left: auto;
+}
+
+.pcs-box .pc-card .pcname {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.pcs-box div.pc-card .spans-box span {
+  padding: 2px 5px;
+  width: max-content;
+  background-color: #4a4545de;
+  border-radius: 5px;
+  font-size: 10px;
+  margin-left: 4px;
+}
+.pcs-box .pc-card button.disconnect-btn {
+  background-color: #cf5548;
+  color: #ffffff;
+  box-shadow: 0 0 2px #230e0d;
+}
+
+.pcs-box .pc-card button.disconnect-btn1 {
+  background-color: #f57e75;
+  color: white;
+  box-shadow: 0 0 2px #230e0d;
+}
+.settings-screen .pcs-box .pc-card .main {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+
+.settings-screen .pcs-box .pc-card .img,
+.settings-screen .methods .card .img {
+  height: 40px;
+  width: 40px;
+  background-color: #88addf1a;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings-screen .pc-card button,
+main .methods button {
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+  margin-top: 5px;
+  background-color: var(--primary-color);
+  color: #121212;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  padding: 0 10px;
+}
+
+.settings-screen .methods .card {
+  min-height: 70px;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  color: white;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.settings-screen .methods .card .img {
+  min-width: 40px;
+  margin-right: 5px;
+}
+
+main .methods .card h3.title {
+  font-weight: 700;
+}
+main .methods .card .text-con {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+main .methods .card button:hover {
+  background-color: var(--primary-hover);
+}
+
+main .methods .card .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+main .methods .card .input-group input {
+  width: 200px;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid #4a4a4a;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+main .methods .card .input-group input:focus {
+  border-color: var(--primary-color);
+}
+
+main .methods .card .img {
+  height: 40px;
+  width: 40px;
+  background-color: #88addf1a;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .methods .code.card .img {
+  margin-right: auto;
+}
+
+main .methods .code.card {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding-block: 20px;
+  padding-left: 15px;
+}
+
+main .methods .code.card > div:first-of-type {
+  margin-right: auto;
+}
+
+.radar .img {
+  background-color: #ff6b6b1a;
+}
+.code .img {
+  background-color: #4ecdc41a;
+}
+.qr .img {
+  background-color: #45b7d11a;
+}
+
+.radar .img svg,
+.code .img svg,
+.qr .img svg {
+  width: 20px;
+  height: 20px;
+}
+
+.personalize-link {
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 40px;
+  width: 100px;
+  border: 1px solid #4a4a4a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  color: white;
+  text-decoration: none;
+  gap: 8px;
+  padding: 0 8px;
+  transition: all 0.2s ease;
+}
+
+.personalize-link:hover {
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.personalize-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.personalize-link p {
+  font-size: 14px;
+  margin: 0;
+}
+.display-none {
+  display: none;
+}
+body div.box {
+  overflow-y: auto;
+  height: 580px;
+  background-color: red;
+  padding-bottom: 20px;
+}

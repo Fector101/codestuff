@@ -1,0 +1,62 @@
+:root {
+  --bg: #0b0d10;
+  --bg-elev: #101318;
+  --panel: #131821;
+  --text: #e7eef8;
+  --muted: #a9b4c3;
+  --brand: #6ad4ff;
+  --brand-strong: #1aa8ff;
+  --accent: #6bffcf;
+  --danger: #ff6b6b;
+  --ok: #2be38a;
+  --ring: rgba(106, 212, 255, 0.4);
+  --card-radius: 18px;
+  --inner-radius: 14px;
+  --shadow-1: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 2px 10px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  --brand-rgb: 106, 212, 255;
+
+  /* Theme variables - can be updated dynamically */
+  --primary-color: #00ff99;
+  --primary-hover: #00e68c;
+  --primary-background: rgba(0, 255, 153, 0.12);
+  --primary-glow: rgba(0, 255, 153, 0.012);
+  --connection-color: #4caf50;
+  --navbar-bg: rgba(20, 20, 20, 0.1);
+  --card-bg: #28252561;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+
+    height: 100vh;
+
+  --footer-height: 4.4rem;
+}
+body #root {
+  display: flex;
+  flex-direction: column;
+  background: rd;
+  height: 100%;
+
+}
+button {
+  border: none;
+}
+.screen {
+  overflow: hidden;
+  height: calc(100% - var(--footer-height));
+}
+footer {
+  height: var(--footer-height);
+
+}
