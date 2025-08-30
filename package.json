@@ -4,7 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.tsx",
-  "homepage": "https://your-username.github.io/your-repo-name", 
+  "homepage": "https://fector101.github.io/codestuff", 
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
